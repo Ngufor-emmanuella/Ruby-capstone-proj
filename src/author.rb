@@ -11,4 +11,5 @@ class Author
       @items_array << item
       item.author = self
     end
-  end;
+  end
+end;
