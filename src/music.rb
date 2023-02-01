@@ -10,6 +10,7 @@ class Music < Item
   end
 
   private
+
   def can_be_archived?
     spuer && @on_spotify == true
   end
