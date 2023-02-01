@@ -25,6 +25,24 @@ class Book_activities
     print 'Enter cover state (good/bad): '
     cover_state = gets.chomp
     book = Book.new(title: title, cover_state: cover_state, publisher: publisher, publish_date: publish_date)
-    
+    label = handle_label
+    label.add_item(book)
+    @labels << label unless @labels.include?(label)
+    @books << book
+    puts 'Book added successfully'
+  end
+
+  def handle_label
+    if @labels.any?
+    print 'Enter (1) to select label or (2) to craete a new label: '
+    user_option = gets.chomp.to_i 
+    case user_option
+    when '1'
+      puts 'select a label from list by index: '
+    when 
+      
+    else
+      
+    end
   end
 end
