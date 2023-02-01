@@ -7,6 +7,27 @@ class Book_activities
     @labels = []
   end
 
+  def list_all_books
+    load_books = Data.new('books.json')
+    books = load_books.load
+    if books.empty?
+      puts 'NO BOOK RECORDS FOUND!'
+    else 
+      books.each_with_index do |book, index|
+        puts "(#{index}) Title: #{book['title']}, Publisher: #{book['publisher']}, Date published: #{book['publish_date']}"
+  end
+
+  def list_all_labels
+    load_labels = Data.new('labels.json')
+    labels = load_labels.load
+    if labels.empty?
+      puts 'NO LABEL RECORDS FOUND!'
+    else
+      labels.each_with_index do |label, index|
+        puts "(#{index}) Title #{label['title']}, Color #{label['color']}"
+    end
+  end
+
   def create_label
     print 'Add label title: '
     title = gets.chomp
@@ -28,7 +49,9 @@ class Book_activities
     label = handle_label
     label.add_item(book)
     @labels << label unless @labels.include?(label)
+    store_labels
     @books << book
+    store_books
     puts 'Book added successfully'
   end
 
