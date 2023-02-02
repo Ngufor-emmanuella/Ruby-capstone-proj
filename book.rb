@@ -5,6 +5,7 @@ class Book < Item
 
   def initialize(publisher:, cover_state:, publish_date:, title: 'unknown', archived: false)
     super(publish_date: publish_date, archived: archived, title: title)
+    @title = title
     @publisher = publisher
     @cover_state = cover_state
   end
@@ -15,3 +16,4 @@ class Book < Item
 
   private :can_be_archived?
 end
+ 
