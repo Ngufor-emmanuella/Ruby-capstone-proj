@@ -1,6 +1,5 @@
 # rubocop:disable all
 class Author
-  # rubocop:enable all
   attr_accessor :first_name, :last_name, :items
 
   def initialize(first_name, last_name)
