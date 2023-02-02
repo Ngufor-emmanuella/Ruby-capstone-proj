@@ -16,4 +16,3 @@ class Book < Item
 
   private :can_be_archived?
 end
- 

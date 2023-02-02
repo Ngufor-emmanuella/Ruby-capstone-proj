@@ -14,7 +14,7 @@ class BookActivities
     books = load_books.load
     if books.empty?
       puts 'NO BOOK RECORDS FOUND!'
-    else 
+    else
       books.each_with_index do |book, index|
         puts "(#{index}) Title: #{book['title']}, Publisher: #{book['publisher']}, Date published: #{book['publish_date']}"
       end
@@ -61,20 +61,20 @@ class BookActivities
   end
 
   def handle_label
-    if @labels.any?
-      print 'Enter (1) to select label or (2) to craete a new label: '
-      user_option = gets.chomp.to_i 
-      case user_option
-      when '1'
-        puts 'select a label from list by index: '
-        list_all_labels
-        option = gets.chomp
-        @labels[user_option.to_i]
-      when '2'
-        create_label
-      else
-        print 'invalid entry'
-      end
+    return unless @labels.any?
+
+    print 'Enter (1) to select label or (2) to craete a new label: '
+    user_option = gets.chomp.to_i
+    case user_option
+    when '1'
+      puts 'select a label from list by index: '
+      list_all_labels
+      user_option = gets.chomp
+      @labels[user_option.to_i]
+    when '2'
+      create_label
+    else
+      print 'invalid entry'
     end
   end
 
@@ -85,7 +85,7 @@ class BookActivities
       books << { title: book.title, publisher: book.publisher, publish_date: book.publish_date, cover_state: book.cover_state }
     end
     stored_books.save(books)
-  end 
+  end
 
   def store_labels
     stored_labels = Data.new('./labels.json')
