@@ -11,7 +11,7 @@ describe Genre do
 
     it 'crreates a new object of Genre name' do
       genre = Genre.new('emma')
-      expect(genre.items). to eq([])
+      expect(genre.items).to eq([])
     end
 
     it 'generates random id' do
