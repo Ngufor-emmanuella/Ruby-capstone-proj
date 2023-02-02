@@ -15,7 +15,27 @@ class Genre
     item.genre = self
   end
 
+  private
+
   def generate_id
     rand(i..1000)
+  end
+
+  public
+
+  def as_json()
+    {
+      JSON.create_id => self.class.name,
+      'name' => @name,
+      'id' => @id
+    }
+  end
+
+  def to_json(*options)
+    as_json.to_json(*options)
+  end
+
+  def self.json_create(object)
+    new(object['name'], id: object['id'])
   end
 end
