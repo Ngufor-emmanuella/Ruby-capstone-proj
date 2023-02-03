@@ -1,12 +1,14 @@
 require './src/riz/game_author'
 require_relative './src/music_module/app_methods'
+require_relative './book_activities'
 
 class App
-  # include PreserveArcade
+  #include PreserveArcade
   include AppMethods
 
   def initialize
     @game = GameAuthor.new
+    @book = BookActivities.new
   end
 
   def list_options
@@ -29,7 +31,7 @@ class App
   end
 
   def way_to_exit
-    preserve_arcade_data(@arcade)
+    #preserve_arcade_data(@arcade)
     @game.save_authors
     @game.save_games
     puts 'Exiting...'
@@ -39,7 +41,7 @@ class App
   def first_choices(input)
     case input
     when 1
-      @arcade.list_books(false)
+      @book.list_all_books
     when 2
       list_music_albums
     when 3
@@ -52,7 +54,7 @@ class App
     when 4
       list_genres
     when 5
-      @arcade.list_labels(false)
+      @book.list_all_labels
     when 6
       @game.list_authors
     end
@@ -61,7 +63,7 @@ class App
   def third_choices(input)
     case input
     when 7
-      @arcade.add_book
+      @book.add_book
     when 8
       add_music_album
     when 9

@@ -50,7 +50,7 @@ class BookActivities
     publish_date = gets.chomp
     print 'Enter cover state (good/bad): '
     cover_state = gets.chomp
-    book = Book.new(title: title, cover_state: cover_state, publisher: publisher, publish_date: publish_date)
+    book = Book.new(title: title, publisher: publisher, cover_state: cover_state, publish_date: publish_date)
     label = handle_label
     label.add_item(book)
     @labels << label unless @labels.include?(label)
