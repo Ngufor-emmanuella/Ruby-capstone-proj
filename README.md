@@ -73,7 +73,7 @@ In order to run this project you need:
 Clone this [repository](https://github.com/Ngufor-emmanuella/Ruby-capstone-proj) to your desired folder:
 
 ```sh
-  cd my-folder
+  
   git clone https://github.com/Ngufor-emmanuella/Ruby-capstone-proj.git
   cd Ruby-capstone-proj
 ```
