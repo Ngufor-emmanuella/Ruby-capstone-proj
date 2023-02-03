@@ -1,21 +1,32 @@
 require 'json'
 
-class Data
-  attr_reader :path_name
-
-  def initialize(path_name)
-    @path_name = path_name
+module Data
+  def save_book(book)
+    File.write('./books.json', JSON.pretty_generate(book))
+    puts 'Book added successfully!'
   end
 
-  def save(data)
-    data_to_save = JSON.pretty_generate(data)
-    File.write(path_name, data_to_save.to_s)
+  def load_books
+    if File.exist?('./books.json')
+      listbooks = File.open('./books.json')
+      info = listbooks.read
+      JSON.parse(info)
+    else
+      File.write('./books.json', [])
+    end
   end
 
-  def load
-    return [] unless File.exist?(@path_name)
+    def save_labels(label)
+      File.write('./labels.json', JSON.pretty_generate(label))
+    end
 
-    file = File.read(@path_name)
-    JSON.parse(file)
+  def load_labels
+    if File.exist?('./labels.json')
+      listlabels = File.open('./labels.json')
+      info = listlabels.read
+      JSON.parse(info)
+    else
+      File.write('./labels.json', [])
+    end
   end
 end
