@@ -1,14 +1,11 @@
-require './src/riz/arcade'
-require './src/riz/modules/preserve_arcade'
-require_relative './music_module/app_methods'
 require './src/riz/game_author'
+require_relative './src/music_module/app_methods'
 
 class App
-  include PreserveArcade
+  # include PreserveArcade
   include AppMethods
 
   def initialize
-    @arcade = Arcade.new
     @game = GameAuthor.new
   end
 
