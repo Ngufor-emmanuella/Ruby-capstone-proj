@@ -1,5 +1,5 @@
 require './src/riz/game_author'
-require_relative './src/music_module/app_methods.rb'
+require_relative './src/music_module/app_methods'
 
 class App
   # include PreserveArcade
