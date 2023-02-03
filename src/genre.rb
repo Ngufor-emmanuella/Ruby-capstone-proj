@@ -16,6 +16,6 @@ class Genre
   end
 
   def generate_id
-    rand(i..1000)
+    Random.rand(1..1000)
   end
 end
