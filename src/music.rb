@@ -12,6 +12,8 @@ class Music < Item
   private
 
   def can_be_archived?
-    spuer && @on_spotify == true
+    super && @on_spotify == true
   end
+
+  private :can_be_archived?
 end

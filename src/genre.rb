@@ -10,15 +10,15 @@ class Genre
     @items = []
   end
 
-  def add_items(item)
-    @items << item
+  def add_item(item)
+    @items.push(item)
     item.genre = self
   end
 
   private
 
   def generate_id
-    rand(i..1000)
+    Random.rand(1..1000)
   end
 
   public
