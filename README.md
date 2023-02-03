@@ -75,7 +75,7 @@ Clone this [repository](https://github.com/Ngufor-emmanuella/Ruby-capstone-proj)
 ```sh
   cd my-folder
   git clone https://github.com/Ngufor-emmanuella/Ruby-capstone-proj.git
-  cd catalog_of_my_things
+  cd Ruby-capstone-proj
 ```
 
 ### Install
