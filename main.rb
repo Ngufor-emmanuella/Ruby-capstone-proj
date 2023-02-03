@@ -1,12 +1,13 @@
-require './app'
+require_relative './app'
 
 def main
-  puts
-  puts
-  puts 'WELCOME TO CATALOG OF MY THINGS APP!!'
-  puts '============================================================='
+  puts 'Welcome'
+
   app = App.new
-  app.show_menu
+
+  loop do
+    app.choices
+  end
 end
 
 main
