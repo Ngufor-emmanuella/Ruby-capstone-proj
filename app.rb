@@ -3,7 +3,7 @@ require_relative './src/music_module/app_methods'
 require_relative './book_activities'
 
 class App
-  #include PreserveArcade
+  # include PreserveArcade
   include AppMethods
 
   def initialize
@@ -31,7 +31,7 @@ class App
   end
 
   def way_to_exit
-    #preserve_arcade_data(@arcade)
+    # preserve_arcade_data(@arcade)
     @game.save_authors
     @game.save_games
     puts 'Exiting...'

@@ -6,7 +6,6 @@ class Item
     @id = rand(100...1000)
     @publish_date = publish_date
     @archived = archived
-
   end
 
   def genre=(genre)

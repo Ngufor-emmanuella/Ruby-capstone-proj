@@ -3,7 +3,6 @@ require 'json'
 module Data
   def save_book(book)
     File.write('./books.json', JSON.pretty_generate(book))
-    puts 'Book added successfully!'
   end
 
   def load_books
@@ -16,9 +15,9 @@ module Data
     end
   end
 
-    def save_labels(label)
-      File.write('./labels.json', JSON.pretty_generate(label))
-    end
+  def save_labels(label)
+    File.write('./labels.json', JSON.pretty_generate(label))
+  end
 
   def load_labels
     if File.exist?('./labels.json')
