@@ -1,6 +1,6 @@
 require_relative './music_album'
 
-class MusicDetail < MusicAlbum
+class Music_Detail < Music_Album
   @musicAlbums = []
   attr_reader :title, :artist
 

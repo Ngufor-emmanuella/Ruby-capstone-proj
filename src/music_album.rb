@@ -1,6 +1,6 @@
 require_relative './item'
 
-class MusicAlbum < Item
+class Music_Album < Item
   attr_reader :id
   attr_accessor :on_spotify
 
