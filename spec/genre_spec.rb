@@ -1,5 +1,5 @@
-require_relative './src/genre'
-require_relative './src/item'
+require_relative '../src/genre'
+require_relative '../src/item'
 
 describe Genre do
   context 'when testing genre class mthods' do
