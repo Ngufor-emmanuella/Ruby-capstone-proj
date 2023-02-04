@@ -1,6 +1,7 @@
 require './src/riz/game_author'
 require_relative './src/music_module/app_methods'
 require_relative './book_activities'
+require_relative './music_activities'
 
 class App
   # include PreserveArcade
@@ -9,6 +10,7 @@ class App
   def initialize
     @game = GameAuthor.new
     @book = BookActivities.new
+    @music = MusicActivities.new
   end
 
   def list_options
@@ -45,7 +47,7 @@ class App
     when 1
       @book.list_all_books
     when 2
-      list_music_albums
+      @music.list_all_music
     when 3
       @game.list_games
     end
@@ -54,7 +56,7 @@ class App
   def second_choices(input)
     case input
     when 4
-      list_genres
+      @music.list_all_genres
     when 5
       @book.list_all_labels
     when 6
@@ -67,7 +69,7 @@ class App
     when 7
       @book.add_book
     when 8
-      add_music_album
+      @music.add_music_album
     when 9
       @game.add_game
     end
