@@ -1,4 +1,4 @@
-require_relative './item'
+require_relative '../src/item'
 
 class Music < Item
   attr_reader :id
