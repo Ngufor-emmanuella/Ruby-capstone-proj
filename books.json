@@ -62,5 +62,11 @@
     "cover": "Bad",
     "publisher": "Pengs",
     "publish_date": "2020-02-01"
+  },
+  {
+    "title": "Mary Mary",
+    "cover": "bad",
+    "publisher": "Penguin",
+    "publish_date": "2012-05-24"
   }
 ]

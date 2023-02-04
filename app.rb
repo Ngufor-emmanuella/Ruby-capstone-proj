@@ -83,7 +83,7 @@ class App
       first_choices(input)
     elsif input > 3 && input < 7
       second_choices(input)
-    elsif input > 6 && input < 10
+    elsif input > 6 && input <= 9
       third_choices(input)
     else
       way_to_exit
