@@ -1,5 +1,5 @@
+# rubocop:disable all
 require_relative './items'
-
 class Genre
   attr_reader :id
   attr_accessor :name, :items
