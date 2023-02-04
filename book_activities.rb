@@ -37,7 +37,7 @@ class BookActivities
     title = gets.chomp
     print 'Add label color: '
     color = gets.chomp
-    label = Label.new(title, color)
+    Label.new(title, color)
     @labels << { title: title, color: color }
     save_labels(@labels)
     puts 'Label created successfully!'
@@ -53,13 +53,13 @@ class BookActivities
     publish_date = validate_date(date)
     print 'Enter cover state (good/bad): '
     cover_state = gets.chomp
-    book = Book.new(title, cover_state, publisher, publish_date)
+    Book.new(title, cover_state, publisher, publish_date)
     @books << { title: title, cover: cover_state, publisher: publisher, publish_date: publish_date }
     puts 'Book added successfully!'
     save_book(@books)
     puts 'Would you like to create label? [1] = Yes & [2] = No'
     option = gets.chomp.to_i
-    case option 
+    case option
     when 1
       create_label
     when 2
