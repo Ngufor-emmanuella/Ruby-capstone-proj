@@ -18,7 +18,7 @@ class MusicActivities
       @music.each_with_index do |music, index|
         puts "(#{index}) Album: #{music['publish_date']}, on_spotify: #{music['on_spotify']}"
       end
-    end   
+    end
   end
 
   def list_all_genres
@@ -36,7 +36,7 @@ class MusicActivities
     print 'Add genre name: '
     genre_name = gets.chomp
     Genre.new(genre_name)
-    @genres << genre_name 
+    @genres << genre_name
     save_genres(@genres)
     puts 'Genre added successfully!'
   end

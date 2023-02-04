@@ -3,7 +3,7 @@ class Genre
   attr_accessor :name, :items
 
   def initialize(name)
-    #@id = id.nil? generate_id :id
+    # @id = id.nil? generate_id :id
     @name = name.to_s
     @items = []
   end

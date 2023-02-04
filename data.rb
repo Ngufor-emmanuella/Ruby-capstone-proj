@@ -36,7 +36,7 @@ module Data
   def save_genres(genre)
     File.write('./genres.json', JSON.pretty_generate(genre))
   end
-  
+
   def load_genres
     if File.exist?('./genres.json')
       listgenres = File.open('./genres.json')
