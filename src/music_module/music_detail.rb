@@ -17,7 +17,3 @@ class MusicDetail < MusicAlbum
     @@musicAlbums
   end
 end
-
-
-
-
