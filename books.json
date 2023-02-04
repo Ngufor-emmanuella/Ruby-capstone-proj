@@ -44,5 +44,17 @@
     "cover": "k",
     "publisher": "iuy",
     "publish_date": "kj"
+  },
+  {
+    "title": "Book1",
+    "cover": "good",
+    "publisher": "Pengs",
+    "publish_date": "2020"
+  },
+  {
+    "title": "2guns",
+    "cover": "good",
+    "publisher": "Pengs",
+    "publish_date": "2020-05-23"
   }
 ]

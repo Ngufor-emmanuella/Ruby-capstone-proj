@@ -13,8 +13,7 @@ class App
 
   def list_options
     op = "
-    Welcome to catalog of things
-    Please choose your desired option below
+    Please choose your desired option below:
 
     (1) List all books
     (2) List all music albums
@@ -28,13 +27,16 @@ class App
     (10) Quit"
 
     puts op
+    puts '================================================'
   end
 
   def way_to_exit
     # preserve_arcade_data(@arcade)
     @game.save_authors
     @game.save_games
-    puts 'Exiting...'
+
+    puts 'Thank you for using the App, Goodbye!'
+    puts
     exit
   end
 

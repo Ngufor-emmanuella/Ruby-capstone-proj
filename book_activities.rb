@@ -27,7 +27,7 @@ class BookActivities
       puts 'NO LABEL RECORDS FOUND!'
     else
       @labels.each_with_index do |label, index|
-        puts "(#{index}) Title #{label['title']}, Color #{label['color']}"
+        puts "(#{index}) Title: #{label['title']}, Color: #{label['color']}"
       end
     end
   end
@@ -49,7 +49,8 @@ class BookActivities
     print 'Enter book publisher: '
     publisher = gets.chomp
     print 'Enter date published: '
-    publish_date = gets.chomp
+    date = gets.chomp
+    publish_date = validate_date(date)
     print 'Enter cover state (good/bad): '
     cover_state = gets.chomp
     book = Book.new(title, cover_state, publisher, publish_date)
@@ -66,5 +67,16 @@ class BookActivities
     else
       puts 'Invalid entry, try again!'
     end
+  end
+
+  def validate_date(date)
+    format = '%Y-%m-%d'
+    DateTime.strptime(date, format)
+    date
+  rescue ArgumentError
+    puts 'Invalid date. Required format [YYYY-MM-DD]'
+    print 'Try again: '
+    date = gets.chomp
+    validate_date(date)
   end
 end
