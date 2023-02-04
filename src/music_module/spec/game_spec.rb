@@ -1,5 +1,5 @@
-require './src/item'
-require './src/game'
+require '.../src/item'
+require '.../src/game'
 
 describe Game do
   before :all do

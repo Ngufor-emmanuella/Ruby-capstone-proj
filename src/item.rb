@@ -1,27 +1,25 @@
-class Item
-  attr_accessor :publish_date, :archived
-  attr_reader :id, :label
+require 'date'
 
+class Item
   def initialize(publish_date, archived: false)
     @id = rand(100...1000)
     @publish_date = publish_date
     @archived = archived
+    @label = nil
   end
 
   def genre=(genre)
-    genre.item = self
+    @genre = genre
+    genre.items.push(self) unless genre.items.include?(self)
   end
 
   def author=(author)
     author.item = self
   end
 
-  def source=(source)
-    source.item = self
-  end
-
-  def label=(label)
-    label.item = self
+  def modify_label(label)
+    @label&.remove_item(self)
+    label.add_item(self)
   end
 
   def can_be_archived?
@@ -30,7 +28,9 @@ class Item
     ((@now - @date) / 365).floor > 10
   end
 
-  def moved_to_archive
+  private :can_be_archived?
+
+  def move_to_archive
     @archived = true if can_be_archived?
   end
 end

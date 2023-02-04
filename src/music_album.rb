@@ -1,6 +1,6 @@
 require_relative './item'
 
-class Music < Item
+class MusicAlbum < Item
   attr_reader :id
   attr_accessor :on_spotify
 
@@ -12,6 +12,8 @@ class Music < Item
   private
 
   def can_be_archived?
-    spuer && @on_spotify == true
+    super && @on_spotify == true
   end
+
+  private :can_be_archived?
 end

@@ -1,5 +1,5 @@
-require './src/author'
-require './src/item'
+require '../src/author'
+require '../src/item'
 
 describe Author do
   before :all do
