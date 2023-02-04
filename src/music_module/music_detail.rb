@@ -1,7 +1,7 @@
 require_relative './music_album'
 
-class Music_Detail < Music_Album
-  @musicAlbums = []
+class Music_detail < Music_album
+  @music_albums = []
   attr_reader :title, :artist
 
   def initialize(title, artist, genre, on_spotify, publish_date)
@@ -10,10 +10,10 @@ class Music_Detail < Music_Album
     @artist = artist
     @genre = genre
 
-    @@musicAlbums << self
+    @@music_albums << self
   end
 
   def self.list_music_albums
-    @@musicAlbums
+    @@music_albums
   end
 end
