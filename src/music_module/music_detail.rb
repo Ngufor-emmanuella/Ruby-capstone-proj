@@ -1,7 +1,7 @@
 require_relative './music_album'
 
 class MusicDetail < MusicAlbum
-  @@musicAlbums = []
+  @musicAlbums = []
   attr_reader :title, :artist
 
   def initialize(title, artist, genre, on_spotify, publish_date)

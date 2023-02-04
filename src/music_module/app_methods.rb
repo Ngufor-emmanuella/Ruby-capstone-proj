@@ -33,9 +33,6 @@ module AppMethods
 
     print 'Enter genre: '
     genre = gets.chomp
-
-    print 'Enter genre: '
-    genre = gets.chomp
     print 'Is it on_spotify? [Y/N] '
     spotify = gets.chomp.downcase
     on_spotify = it_true(spotify)
